@@ -1,7 +1,8 @@
 import requests
 import pandas as pd
 
-
+# Парсинг данных сайта https://www.gosnadzor.ru и выгрузка в out.xlsx
+#
 def register_of_licens(i):
     html = requests.get('https://www.gosnadzor.ru/service/list/reestr_licences_99fz/?PAGEN_1={}'.format(i)).content
     df_list = pd.read_html(html)
